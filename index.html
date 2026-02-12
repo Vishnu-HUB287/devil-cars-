@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devil Cars - Guntur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>DEVIL CARS</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#cars">Cars</a></li>
+        <li><a href="#book">Book</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Drive Luxury in Guntur</h1>
+        <p>Premium Car Rentals Available Only in Guntur 📍</p>
+        <button class="btn" onclick="scrollToBooking()">Book Now</button>
+    </div>
+</section>
+
+<!-- CARS SECTION -->
+<section class="cars" id="cars">
+    <h2>Our Premium Cars</h2>
+    <div class="car-container">
+        <div class="card">
+            <img src="kia sonet.png" alt="KIA SONET">
+            <h3>KIA SONET</h3>
+            <p>₹2500 / Day</p>
+        </div>
+        <div class="card">
+            <img src="fronx.png" alt="SUZUKI FRONX">
+            <h3>SUZUKI FRONX</h3>
+            <p>₹3000 / Day</p>
+        </div>
+        <div class="card">
+            <img src="creta.png" alt="HYUNDAI CRETA">
+            <h3>HYUNDAI CRETA</h3>
+            <p>₹3000 / Day</p>
+        </div>
+        <div class="card">
+            <img src="thar roxx.png" alt="MAHINDRA THAR ROXX">
+            <h3>MAHINDRA THAR ROXX</h3>
+            <p>₹6000 / Day</p>
+        </div>
+        <div class="card">
+            <img src="scripo.png" alt="MAHINDRA SCORPIO N">
+            <h3>MAHINDRA SCORPIO N</h3>
+            <p>₹5000 / Day</p>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking" id="book">
+    <h2>Book Your Car (Guntur Only)</h2>
+
+    <input type="text" id="name" placeholder="Your Name"><br>
+    <input type="text" id="phone" placeholder="Phone Number"><br>
+
+    <select id="car">
+        <option>Select Car</option>
+        <option>KIA SONET</option>
+        <option>SUZUKI FRONX</option>
+        <option>HYUNDAI CRETA</option>
+        <option>MAHINDRA THAR ROXX</option>
+        <option>MAHINDRA SCORPIO N</option>
+    </select><br>
+
+    <input type="date" id="date"><br>
+    <input type="text" value="Guntur" readonly><br>
+
+    <button class="btn" onclick="sendWhatsApp()">Book via WhatsApp</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Devil Cars - Guntur | Premium Car Rentals
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="javascript:void(0)" class="whatsapp-float" onclick="sendWhatsApp()">
+   <i class="fab fa-whatsapp"></i>
+   <span class="whatsapp-label">Chat With Us</span>
+</a>
+
+<!-- SCRIPTS -->
+<script>
+function scrollToBooking(){
+    document.getElementById("book").scrollIntoView({behavior:"smooth"});
+}
+
+function sendWhatsApp() {
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let car = document.getElementById("car").value;
+    let date = document.getElementById("date").value;
+
+    if(name === "" || phone === "" || car === "Select Car" || date === ""){
+        alert("Please fill all details correctly!");
+        return;
+    }
+
+    let message = "Hello Devil Cars 🚗\n\n" +
+                  "Booking Details:\n" +
+                  "Name: " + name + "\n" +
+                  "Phone: " + phone + "\n" +
+                  "Car: " + car + "\n" +
+                  "Date: " + date + "\n" +
+                  "City: Guntur";
+
+    let encodedMessage = encodeURIComponent(message);
+    let whatsappURL = "https://api.whatsapp.com/send?phone=917075383936&text=" + encodedMessage;
+    window.open(whatsappURL, "_blank");
+}
+</script>
+
+</body>
+</html>
