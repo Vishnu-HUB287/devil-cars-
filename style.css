@@ -11,7 +11,7 @@ body{
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+
 nav{
     display:flex;
     justify-content:space-between;
@@ -50,7 +50,7 @@ nav ul li a:hover{
     color:gold;
 }
 
-/* HERO */
+
 .hero{
     height:90vh;
     background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') no-repeat center/cover;
@@ -101,7 +101,7 @@ nav ul li a:hover{
     box-shadow:0 0 30px gold;
 }
 
-/* CARS SECTION */
+
 .cars{
     padding:80px 60px;
     text-align:center;
@@ -164,7 +164,7 @@ nav ul li a:hover{
     border-color:gold;
 }
 
-/* BOOKING */
+
 .booking{
     background:#000;
     padding:80px 20px;
@@ -202,13 +202,78 @@ nav ul li a:hover{
     box-shadow:0 0 20px rgba(255,215,0,0.5);
 }
 
-/* FOOTER */
+
 footer{
     background:#111;
-    text-align:center;
-    padding:20px;
+    padding:40px 20px 20px;
     color:#aaa;
     margin-top:40px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+    gap:30px;
+}
+
+.footer-section{
+    text-align:center;
+    min-width:200px;
+}
+
+.footer-section h3{
+    color:gold;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.footer-section p{
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-section a{
+    color:#aaa;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+    color:gold;
+}
+
+.social-links{
+    margin-top:15px;
+}
+
+.social-links a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    background:#222;
+    border-radius:50%;
+    margin:0 5px;
+    color:white;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    background:gold;
+    color:black;
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    font-size:14px;
 }
 
 /* FLOATING WHATSAPP BUTTON */
@@ -273,6 +338,217 @@ footer{
     }
 }
 
+/* FEATURES SECTION */
+.features{
+    padding:80px 60px;
+    text-align:center;
+    background:linear-gradient(135deg,#0a0a0a,#1a1a1a);
+}
+
+.features h2{
+    color:gold;
+    margin-bottom:50px;
+    font-size:35px;
+    text-shadow:0 0 10px gold;
+}
+
+.features-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.feature-card{
+    background:#1a1a1a;
+    padding:30px 20px;
+    border-radius:15px;
+    width:280px;
+    transition:0.4s;
+    border:2px solid transparent;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeInUp 0.8s forwards;
+}
+
+.feature-card:nth-child(1){animation-delay:0.1s;}
+.feature-card:nth-child(2){animation-delay:0.2s;}
+.feature-card:nth-child(3){animation-delay:0.3s;}
+.feature-card:nth-child(4){animation-delay:0.4s;}
+.feature-card:nth-child(5){animation-delay:0.5s;}
+.feature-card:nth-child(6){animation-delay:0.6s;}
+
+.feature-card i{
+    font-size:45px;
+    color:gold;
+    margin-bottom:15px;
+    transition:0.4s;
+}
+
+.feature-card:hover i{
+    transform:scale(1.2);
+    text-shadow:0 0 20px gold;
+}
+
+.feature-card h3{
+    color:white;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.feature-card p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    border-color:gold;
+    box-shadow:0 10px 30px rgba(255,215,0,0.2);
+}
+
+
+/* TESTIMONIALS SECTION */
+.testimonials{
+    padding:80px 60px;
+    text-align:center;
+    background:#0a0a0a;
+}
+
+.testimonials h2{
+    color:gold;
+    margin-bottom:50px;
+    font-size:35px;
+    text-shadow:0 0 10px gold;
+}
+
+.testimonials-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.testimonial-card{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    transition:0.4s;
+    border:2px solid transparent;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeInUp 0.8s forwards;
+}
+
+.testimonial-card:nth-child(1){animation-delay:0.1s;}
+.testimonial-card:nth-child(2){animation-delay:0.3s;}
+.testimonial-card:nth-child(3){animation-delay:0.5s;}
+
+.testimonial-card .stars{
+    color:gold;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.testimonial-card p{
+    color:#ddd;
+    font-style:italic;
+    margin-bottom:15px;
+    line-height:1.6;
+}
+
+.testimonial-card h4{
+    color:gold;
+    font-size:16px;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    border-color:gold;
+    box-shadow:0 10px 30px rgba(255,215,0,0.2);
+}
+
+
+/* FAQ SECTION */
+.faq{
+    padding:80px 60px;
+    text-align:center;
+    background:linear-gradient(135deg,#1a1a1a,#0a0a0a);
+}
+
+.faq h2{
+    color:gold;
+    margin-bottom:40px;
+    font-size:35px;
+    text-shadow:0 0 10px gold;
+}
+
+.faq-container{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.faq-item{
+    margin-bottom:15px;
+    background:#1a1a1a;
+    border-radius:10px;
+    overflow:hidden;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+.faq-item:hover{
+    border-color:rgba(255,215,0,0.3);
+}
+
+.faq-question{
+    width:100%;
+    padding:20px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight:500;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:0.3s;
+}
+
+.faq-question:hover{
+    background:rgba(255,215,0,0.1);
+}
+
+.faq-question i{
+    color:gold;
+    transition:0.3s;
+}
+
+.faq-question.active i{
+    transform:rotate(180deg);
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.3s ease;
+    background:#222;
+}
+
+.faq-answer p{
+    padding:20px;
+    color:#aaa;
+    line-height:1.6;
+    text-align:left;
+}
+
+
 /* RESPONSIVE */
 @media(max-width:768px){
     nav{
@@ -284,10 +560,45 @@ footer{
     .cars{
         padding:40px 20px;
     }
+    .features{
+        padding:50px 20px;
+    }
+    .feature-card{
+        width:100%;
+        max-width:350px;
+    }
+    .testimonials{
+        padding:50px 20px;
+    }
+    .testimonial-card{
+        width:100%;
+        max-width:400px;
+    }
+    .faq{
+        padding:50px 20px;
+    }
+    .footer-content{
+        flex-direction:column;
+        align-items:center;
+    }
+    .footer-section{
+        width:100%;
+    }
 }
 
 @media(max-width:600px){
     .whatsapp-label{
         display:none;
+    }
+    .hero-content{
+        padding:30px;
+    }
+    .hero h1{
+        font-size:26px;
+    }
+    .features h2,
+    .testimonials h2,
+    .faq h2{
+        font-size:26px;
     }
 }
